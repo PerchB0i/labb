@@ -40,12 +40,12 @@ public class DeathCauseStatistic {
     }
     public AgeBracketsDeaths getBracket(int age) {
         AgeBracketsDeaths newBracket;
-
+        int deathCount;
         if (age >= 95) {
-            newBracket = new AgeBracketsDeaths(95, Integer.MAX_VALUE, 0);
+            newBracket = new AgeBracketsDeaths(95, Integer.MAX_VALUE, deathCount);
         } else {
             int temp = (age/5)*5;
-            newBracket = new AgeBracketsDeaths(temp, temp+4, 0);
+            newBracket = new AgeBracketsDeaths(temp, temp+4, deathCount);
         }
 
         return newBracket;
